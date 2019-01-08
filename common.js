@@ -72,7 +72,7 @@ function sanitizeAppName (name) {
 }
 
 function generateFinalBasename (opts) {
-  return `${sanitizeAppName(opts.name)}-${opts.platform}-${opts.arch}`
+  return `${sanitizeAppName(opts.name)}-v${opts.appVersion}-${opts.platform.replace("win32", "win")}-${opts.arch.replace("ia32", "x86")}`
 }
 
 function generateFinalPath (opts) {
